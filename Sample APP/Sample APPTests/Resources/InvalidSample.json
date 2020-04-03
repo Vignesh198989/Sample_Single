@@ -1,0 +1,23 @@
+
+{
+    "photos": {
+        "page": 2,
+        "pages": 2625,
+        "perpage": 60,
+        "total": "157452",
+        "photo": [
+            {
+                "id": null,
+                "owner": "61109532@N05",
+                "secret": "38fe2bf30e",
+                "server": "65535",
+                "farm": 66,
+                "title": null,
+                "ispublic": 1,
+                "isfriend": 0,
+                "isfamily": 0
+            }
+        ]
+    },
+    "stat": "ok"
+}
