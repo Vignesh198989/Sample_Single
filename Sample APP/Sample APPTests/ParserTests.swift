@@ -52,7 +52,7 @@ class ParserTests: XCTestCase {
            
            let model = try? Parser<Photo>().decode(data: data!)
            XCTAssert(model != nil)
-           XCTAssert(model!.id == "2750")
+           XCTAssert(model!.id == "4242343242")
            
        }
 
