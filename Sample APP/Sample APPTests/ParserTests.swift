@@ -19,8 +19,9 @@ class ParserTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     func testParserDecode() {
-        let inputFileURL = Bundle.init(for: self.classForCoder).url(forResource: "Sample", withExtension: "json")
-        let data = try! Data.init(contentsOf: inputFileURL!)
+        guard let inputFileURL = Bundle.main.path(forResource: "Sample", ofType: "json", inDirectory: "root") else { return }
+      //  let inputFileURL = Bundle.init(for: self.classForCoder).url(forResource: "Sample", withExtension: "json")
+        let data = try! Data.init(contentsOf: URL.init(string: inputFileURL)!)
         let photos = try? Parser<Photos>().decode(data: data)
         XCTAssert(photos != nil)
         let photo = photos?.photo?.first
